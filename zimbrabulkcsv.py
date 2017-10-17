@@ -1,14 +1,24 @@
 #!/bin/python
+# Name: Zimbra Bulk Provision CSV Converter
+# Description: Convert a CSV file to zmprov format for provision
+# Author: Leonardo Gallego
+# Original Perl: https://wiki.zimbra.com/wiki/Bulk_Provisioning#CSV_File_to_zmprov
 
 import csv
 import sys
 import os
 
+# Crear cuenta:
 # ca uid@dominio clave
+# Modificar cuenta (nombre)
 # ma uid@dominio givenName "Nombres"
+# Modificar cuenta (apellido)
 # ma uid@dominio sn "Apellidos"
+# Modificar cuenta (uid)
 # ma uid@dominio cn "uid"
+# Modificar displayname (Remitente)
 # ma uid@dominio displayName "Nombres Apellidos"
+# Modificar cambiar clave 
 # ma uid@dominio zimbraPasswordMustChange TRUE
 
 archivo = sys.argv[1]
